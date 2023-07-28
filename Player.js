@@ -13,7 +13,8 @@ class Player {
     this.life1 = "green";
     this.life2 = "green";
     this.life3 = "green";
-       World.add(world, this.body);
+
+    World.add(world, this.body);
   }
 
   life() {
@@ -24,13 +25,12 @@ class Player {
 
     // crie a vida em forma de retângulo
     fill(this.life1);
-    rect(width - 1000, 50, 70, 30);
+    rect(width - 1060, 50, 70, 30);
     fill(this.life2);
-    rect(width - 1070, 50, 70, 30);
+    rect(width - 1130, 50, 70, 30);
     fill(this.life3);
-    rect(width - 1140, 50, 70, 30);
+    rect(width - 1200, 50, 70, 30);
     pop();
-    
   }
 
  

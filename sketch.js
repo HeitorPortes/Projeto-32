@@ -7,17 +7,15 @@ var engine, world;
 var canvas;
 var palyer, playerBase;
 var computer, computerBase;
-var ground, backgroundImg;
+
 //Declare uma matriz para as flechas playerArrows = [ ]
 var playerArrows = [];
-var computerArrows = [];
+var computerArrows = []
 var arrow;
 var playerArcherLife = 3;
 var computerArcherLife = 3;
 function preload(){
-  backgroundImg = loadImage("assets/background.gif");
-
-  
+  backgroundImg = loadImage("assets/background.gif")
 }
 
 
@@ -54,10 +52,6 @@ function setup() {
     120,
     120
   );
-
-   ground = createSprite(200,200,10,10);
-   ground.addImage(backgroundImg);
-
   //Função para gerenciar as flechas do computador
   handleComputerArcher(); 
 
@@ -67,8 +61,7 @@ function setup() {
 function draw() {
 
   //exibir a imagem de fundo
-  
-  
+  background(backgroundImg);
 
   Engine.update(engine);
 
@@ -101,9 +94,6 @@ for (var i = 0; i < computerArrows.length; i++) {
   showArrows(i, computerArrows);
 }
 
-imageMode(CENTER);
-
-image(backgroundImg, 0, 0, width, height);
 
 //Chame as funções para detectar a colisão para o jogador e o computador
 
